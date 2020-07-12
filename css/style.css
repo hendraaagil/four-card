@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  background: #fafafa;
+}
+
+.container {
+  padding: 30px 84px;
+  display: grid;
+  grid-template-areas:
+    'title title title'
+    'cyan red blue'
+    'cyan red blue'
+    'cyan orange blue'
+    'cyan orange blue';
+  align-items: center;
+  justify-items: center;
+}
+
+.title {
+  grid-area: title;
+  padding: 32px;
+  text-align: center;
+  color: #4c4e61;
+}
+
+.title-thin {
+  font-weight: 200;
+}
+
+.title-thin,
+.title-bold {
+  font-size: 2.25rem;
+}
+
+.sub-title {
+  margin-top: 18px;
+  margin-bottom: 32px;
+  padding: 0 296px;
+  color: #a3a5ae;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 28px 36px;
+  width: 330px;
+  height: 250px;
+  border-radius: 5px;
+  box-shadow: 0 10px 18px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card .card-title {
+  margin-bottom: 8px;
+  color: #4c4e61;
+}
+
+.card .text {
+  margin-bottom: 48px;
+  font-size: 0.8rem;
+  color: #a3a5ae;
+}
+
+.card img {
+  width: 64px;
+  display: flex;
+  align-self: flex-end;
+}
+
+.card-cyan {
+  grid-area: cyan;
+  border-top: 5px solid #45d3d3;
+  justify-self: flex-end;
+}
+
+.card-red {
+  grid-area: red;
+  border-top: 5px solid #ea5353;
+  align-self: center;
+}
+
+.card-orange {
+  grid-area: orange;
+  margin-top: 28px;
+  border-top: 5px solid #fcaf4a;
+  align-self: center;
+}
+
+.card-blue {
+  grid-area: blue;
+  border-top: 5px solid #549ef2;
+  justify-self: flex-start;
+}
+
+.attribution {
+  margin-bottom: 24px;
+  font-size: 0.8rem;
+  text-align: center;
+  color: #4c4e61;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: #a3a5ae;
+}
+
+/* Responsive Breakpoint */
+@media (max-width: 375px) {
+  .container {
+    padding: 10px;
+    grid-template-areas:
+      'title'
+      'cyan'
+      'red'
+      'orange'
+      'blue';
+  }
+
+  .title {
+    margin-top: 64px;
+    padding: 0;
+  }
+
+  .title-thin,
+  .title-bold {
+    font-size: 1.55rem;
+  }
+
+  .sub-title {
+    padding: 0 18px;
+  }
+
+  .card {
+    margin-top: 28px;
+    justify-self: center;
+  }
+
+  .attribution {
+    font-size: 0.6rem;
+    margin-top: 20px;
+  }
+}
